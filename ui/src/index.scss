@@ -1,0 +1,20 @@
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: hsl(0,0,20);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0,0,97);
+}
+
+.app {
+    max-width: 1100px;
+    margin: 0 auto;
+}

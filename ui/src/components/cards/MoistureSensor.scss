@@ -1,0 +1,99 @@
+$md: 768px;
+$lg: 990px;
+
+.sensor-card {
+    display: inline-block;
+    position: relative;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    width: calc(100% - 2rem);
+    margin: 1rem 1rem;
+    box-shadow: 1px 1px 5px hsla(0,0,0,0.1);
+    background-color: hsl(0,0,100);
+}
+
+@media only screen and (min-width: $md) {
+    .sensor-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .sensor-card {
+        width: calc(33% - 2rem);
+    }
+}
+
+.sensor-card:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.sensor-card--name {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    span.name {
+        font-family: 'Arial', sans-serif;
+        color: hsl(0,0,30);
+        font-size: 1.618rem;
+        font-weight: bold;
+    }
+    span.type {
+        color: hsl(0,0,50);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+.sensor-card--date-time {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    text-align: right;
+    span.day {
+        font-family: 'Arial', sans-serif;
+        color: hsl(0,0,40);
+        font-size: 1.28rem;
+        font-weight: bold;
+    }
+    span.date, span.time {
+        color: hsl(0,0,65);
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.sensor-card--bucket {
+    position: relative;
+    margin: 3rem auto 2rem auto;
+    width: 60%;
+    max-width: 240px;
+    height: 200px;
+    background-color: hsl(0,0,100);
+    border: 4px solid hsl(0,0,30);
+    border-top: none;
+    .fill-level {
+        position: absolute;
+        background-color: hsl(230,40,55);
+        width: 100%;
+        bottom: 0;
+        color: hsl(0,0,100);
+    }
+    .fill-value {
+        display: block;
+        position: absolute;
+        font-family: 'Arial', sans-serif;
+        color: hsl(0,0,100);
+        width: auto;
+        bottom: 0.5rem;
+        // Center the value reading horizontally
+        left: 50%;
+        margin-left: -12.5%;
+    }
+}
+
+.sensor-card--time-controls {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
